@@ -1,0 +1,55 @@
+{
+  "name": "koa-boilerplate",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa__router": "^8.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.25.0",
+    "gulp": "^4.0.2",
+    "typescript": "^4.2.4"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "quotes": [
+        1,
+        "double"
+      ],
+      "jsx-quotes": [
+        1,
+        "prefer-double"
+      ],
+      "no=console": "off"
+    }
+  },
+  "eslintIgnore": [
+    "dist",
+    "node_modules"
+  ]
+}
